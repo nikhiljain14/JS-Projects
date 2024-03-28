@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #444;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main-container {
+  width: 100%;
+  padding: 3.5rem;
+  background-color: #fafafa;
+  transition: transform 0.6s linear;
+  transform-origin: top left;
+}
+
+.content-container {
+  margin: 10vh auto;
+  max-width: 1024px;
+}
+
+.content-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  margin: 2rem 0;
+}
+
+.img-container {
+  height: 80vh;
+  width: 80%;
+  margin: auto;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.main-container.active {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: rgb(169, 51, 169);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.6s linear;
+}
+
+.circle button {
+  position: absolute;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+}
+
+.circle button.open {
+  left: 60%;
+}
+
+.circle button.close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.nav {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav i {
+  font-size: 1.2rem;
+  margin-right: 0.6rem;
+}
+
+.nav ul li {
+  color: #fff;
+  cursor: pointer;
+  /* transform: translateX(-100%); */
+  transition: transform 0.4s ease-in;
+  margin: 2.5rem 0;
+}
+
+.nav ul li:nth-child(2) {
+  margin-left: 15px;
+}
+
+.nav ul li:last-child {
+  margin-left: 30px;
+}
