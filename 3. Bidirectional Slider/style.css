@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 100vh;
+}
+
+.left-slide {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.left-slide p {
+  font-size: 1.2rem;
+}
+
+.right-slider {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 70%;
+}
+
+.right-slide {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide1 {
+  background-image: url("https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg");
+}
+
+.slide2 {
+  background-image: url("https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png");
+}
+
+.slide3 {
+  background-image: url("https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-javascript/sta-je-javascript.jpg");
+}
+
+.btns button {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  border: none;
+  cursor: pointer;
+  color: #808080;
+}
+
+.btns button:hover {
+  color: #000;
+}
+
+.btns button i {
+  font-size: 1rem;
+  padding: 15px;
+}
+
+.down-btn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transform: translateX(-100%);
+}
+
+.up-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transform: translateY(-100%);
+}
