@@ -41,6 +41,11 @@ body {
   font-size: 0.9rem;
 }
 
+.choice-color {
+  background-color: teal;
+  color: #e3e3e3;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     width: 85%;
