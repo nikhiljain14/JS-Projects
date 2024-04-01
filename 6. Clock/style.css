@@ -2,6 +2,7 @@
   --primary-color: #fff;
   --secondary-color: #1d2a35;
   --grey: rgb(77, 77, 77);
+  --blue: rgb(33, 33, 205);
 }
 
 * {
@@ -15,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100dvh;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  padding: 3rem 0;
   width: 23rem;
   position: relative;
   background-color: var(--primary-color);
@@ -39,14 +40,14 @@ body {
 
 .mode {
   position: relative;
-  right: -30%;
+  right: -35%;
   font-size: 1.2rem;
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 8px;
   cursor: pointer;
-  color: rgb(12, 12, 228);
+  color: var(--blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +65,94 @@ body {
   height: 16rem;
   width: 16rem;
   border-radius: 50%;
-  margin-top: 3rem;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0.8rem;
+  width: 0.8rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--blue);
+  z-index: 10;
+}
+
+.hand {
+  --rotate: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  transform: translateX(-50%) rotate(0deg);
+  transform-origin: bottom;
+  width: 4px;
+  background-color: var(--secondary-color);
+}
+
+.hours {
+  height: 25%;
+}
+
+.minutes {
+  height: 35%;
+}
+
+.seconds {
+  height: 32%;
+  width: 2px;
+  background-color: var(--blue);
+}
+
+.num {
+  --rotate: 0;
+  position: absolute;
+  height: 95%;
+  width: 95%;
+  text-align: center;
+  transform: rotate(var(--rotate));
+}
+
+.num1 {
+  --rotate: 30deg;
+}
+.num2 {
+  --rotate: 60deg;
+}
+.num3 {
+  --rotate: 90deg;
+}
+.num4 {
+  --rotate: 120deg;
+}
+.num5 {
+  --rotate: 150deg;
+}
+.num6 {
+  --rotate: 180deg;
+}
+.num7 {
+  --rotate: 210deg;
+}
+.num8 {
+  --rotate: 240deg;
+}
+.num9 {
+  --rotate: 270deg;
+}
+.num10 {
+  --rotate: 300deg;
+}
+.num11 {
+  --rotate: 330deg;
 }
 
 .time {
@@ -87,7 +175,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .container {
-    height: 100vh;
+    min-height: 100dvh;
     width: 100%;
   }
 }

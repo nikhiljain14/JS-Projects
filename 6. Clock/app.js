@@ -5,8 +5,9 @@ const mode = document.querySelector(".mode");
 const lightMode = document.querySelector(".light-mode");
 const darkMode = document.querySelector(".dark-mode");
 const body = document.querySelector("body");
-
-console.log(mode, lightMode, darkMode);
+const hoursElm = document.querySelector(".hours");
+const minutesElm = document.querySelector(".minutes");
+const secondsElm = document.querySelector(".seconds");
 
 const months = [
   "Jan",
@@ -23,6 +24,7 @@ const months = [
   "Dec",
 ];
 
+//function for setting current time
 function setTime() {
   let d = new Date();
   let year = d.getFullYear();
@@ -42,10 +44,22 @@ function setTime() {
   dateInfo.innerHTML = `${date < 10 ? "0" + date : date} ${
     months[month]
   }, ${year}`;
+
+  hoursElm.style.transform = `rotate(${scale(hours, 1, 12, 0, 360)}deg)`;
+  minutesElm.style.transform = `rotate(${scale(minutes, 1, 60, 0, 360)}deg)`;
+  secondsElm.style.transform = `rotate(${scale(seconds, 0, 59, 0, 360)}deg)`;
 }
 
-setInterval(() => setTime(), 100);
+//function for mapping a range of numbers to another range of numbers
+function scale(number, inMin, inMax, outMin, outMax) {
+  return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+}
 
+setTime();
+setInterval(() => setTime(), 1000);
+
+
+// dark mode and light mode goes here
 mode.addEventListener("click", () => {
   if (body.classList.contains("dark")) {
     body.classList.remove("dark");
