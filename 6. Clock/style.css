@@ -1,0 +1,93 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #1d2a35;
+  --grey: rgb(77, 77, 77);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 23rem;
+  position: relative;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.dark {
+  --secondary-color: #fff;
+  --primary-color: #1d2a35;
+  --grey: #c1c1c1;
+}
+
+.mode {
+  position: relative;
+  right: -30%;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 8px;
+  cursor: pointer;
+  color: rgb(12, 12, 228);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-mode {
+  display: none;
+}
+
+.clock {
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.2),
+    0px 0px 15px 0px rgba(0, 0, 0, 0.1),
+    5px 5px 5px 0px rgba(255, 255, 255, 0.2) inset,
+    0px 0px 5px 0px rgba(0, 0, 0, 0.1) inset;
+  height: 16rem;
+  width: 16rem;
+  border-radius: 50%;
+  margin-top: 3rem;
+}
+
+.time {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 4rem 0 1rem;
+}
+
+.time span {
+  font-size: 1rem;
+  position: relative;
+  top: -3rem;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: var(--grey);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 100vh;
+    width: 100%;
+  }
+}
