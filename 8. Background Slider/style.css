@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  transition: 0.4s ease-in;
+}
+
+.container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 70dvh;
+  width: 70%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  position: absolute;
+  height: 100dvh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.arrow {
+  z-index: 10;
+  cursor: pointer;
+  position: relative;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.left-arrow {
+  left: -45%;
+}
+
+.right-arrow {
+  left: 45%;
+}
