@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  background: linear-gradient(#ee9ca7, #ffdde1);
+}
+
+.txt {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.speed-container {
+  position: absolute;
+  bottom: 10%;
+  background-color: #ee9ca7;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+#speed {
+  height: 1.5rem;
+  width: 2rem;
+  background-color: #ffdde1;
+  border: none;
+  text-align: end;
+  outline: none;
+}
+
+@media screen and (width < 500px) {
+  .txt {
+    font-size: 2.5rem;
+  }
+
+  #speed {
+    text-align: center;
+  }
+}
