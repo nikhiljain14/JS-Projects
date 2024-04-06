@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  text-align: center;
+  background-color: #B1D4E0;
+  color: #0C2D48;
+}
+
+.box {
+  margin: 1rem 3rem;
+}
+
+.box i {
+  font-size: 3rem;
+}
+
+.cnt {
+  font-size: 3.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.info {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (width < 700px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    flex-direction: column;
+  }
+  .cnt {
+    margin-top: 0;
+  }
+}
