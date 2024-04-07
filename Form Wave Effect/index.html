@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Wave Effect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Login Form</h1>
+    <form>
+      <div class="form_controls">
+        <input type="text" id="email" required>
+        <label for="email">Email</label>
+
+        <!-- <label>   // it is implemented dynamically using JS
+            <span style="transition-delay: 0ms">E</span>
+              <span style="transition-delay: 50ms">m</span>
+              <span style="transition-delay: 100ms">a</span>
+              <span style="transition-delay: 150ms">i</span>
+              <span style="transition-delay: 200ms">l</span>
+        </label> -->
+
+      </div>
+      <div class="form_controls">
+        <input type="text" id="pwd" required>
+        <label for="pwd">Password</label>
+      </div>
+      <button class="btn">Login</button>
+      <p class="txt">Don't have an account? <a href="#">Register</a></p>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
