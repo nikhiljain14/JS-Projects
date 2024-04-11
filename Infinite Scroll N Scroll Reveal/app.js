@@ -21,7 +21,7 @@ function infiniteScroll() {
   let { clientHeight, scrollTop, scrollHeight } = document.documentElement;
 
   //main logic for infinite scroll
-  if (Math.ceil(clientHeight + scrollTop) >= scrollHeight) {
+  if (Math.ceil(clientHeight + scrollTop) >= scrollHeight-100) {
     createElm();
   }
 }
